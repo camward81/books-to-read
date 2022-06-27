@@ -1,0 +1,59 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  .title-container {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    label {
+      padding-right: 0.5rem;
+    }
+    input {
+      padding: 2px;
+      position: relative;
+      bottom: 3px;
+    }
+  }
+  .author-container {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    label {
+      padding-right: 0.5rem;
+    }
+    input {
+      padding: 2px;
+      position: relative;
+      bottom: 3px;
+    }
+  }
+  button {
+    position: relative;
+    bottom: 2px;
+    justify-content: center;
+    margin-left: 1rem;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background-color: rgb(107, 99, 99);
+    color: whitesmoke;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+}
+
+.input-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  z-index: 1;
+  position: relative;
+  bottom: 3rem;
+  color: red;
+}

@@ -1,0 +1,106 @@
+.read-header {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    z-index: 2;
+    .top {
+      background: black;
+      height: 2px;
+      width: 20px;
+      margin: 1px 1px 3px 1px;
+    }
+    .middle {
+      position: relative;
+      background: black;
+      height: 2px;
+      width: 20px;
+      margin: 1px 1px 3px 1px;
+    }
+    .bottom {
+      background: black;
+      height: 2px;
+      width: 20px;
+      margin: 1px 1px 3px 1px;
+    }
+  }
+}
+
+.read-container {
+  position: absolute;
+  min-height: 100vh;
+  left: 0px;
+  top: 0px;
+  width: 15rem;
+  background: rgb(249, 248, 248);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1;
+  h1 {
+    position: relative;
+    bottom: 1px;
+    font-size: 1.2rem;
+    text-align: end;
+    text-transform: uppercase;
+    padding: 0rem 1rem 0.5rem 0.5rem;
+    border-bottom: 1px rgba(0, 0, 0, 0.36) solid;
+  }
+  .read-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(232, 231, 231);
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    .title {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    .author {
+      font-size: 0.8rem;
+    }
+    .delete {
+      display: none;
+    }
+  }
+  .read-book:hover {
+    background-color: rgb(210, 208, 208);
+    .hidden-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      left: 95%;
+      bottom: 0.3rem;
+      .line-1 {
+        border-bottom: 2px white solid;
+        width: 0.9rem;
+        margin-bottom: 2px;
+        transform: rotate(-45deg) translate(-3px);
+      }
+      .line-2 {
+        border-bottom: 2px white solid;
+        width: 0.9rem;
+        transform: rotate(45deg) translate(-2px);
+      }
+      .delete {
+        display: none;
+      }
+    }
+    .hidden-2:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.book {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  width: 10rem;
+  background: linear-gradient(45deg, rgb(10, 76, 10), rgb(27, 113, 27));
+  border-radius: 2px 5px 5px 2px;
+  border-left: 2px rgba(0, 0, 0, 0.872) solid;
+  color: whitesmoke;
+  box-shadow: 10px 10px 8px #888888;
+  h1 {
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.631);
+    border-radius: 2px 5px 0px 0px;
+  }
+  h2 {
+    padding: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .hidden {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hidden-1 {
+    display: none;
+  }
+  .hidden-2 {
+    display: none;
+  }
+}
+
+.book:hover {
+  opacity: 0.9;
+  .hidden-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 1rem;
+    .add {
+      display: none;
+    }
+  }
+  .hidden-1:hover {
+    cursor: pointer;
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid whitesmoke;
+      position: relative;
+      z-index: 1;
+      top: 5px;
+    }
+    .add {
+      display: block;
+      padding: 3px 10px 3px 10px;
+      background: whitesmoke;
+      margin-top: 5px;
+      color: black;
+      border-radius: 5px;
+      z-index: 1;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+  .hidden-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .line-1 {
+      border-bottom: 2px whitesmoke solid;
+      width: 1rem;
+      margin-bottom: 2px;
+      transform: rotate(-45deg) translate(-3px);
+    }
+    .line-2 {
+      border-bottom: 2px whitesmoke solid;
+      width: 1rem;
+      transform: rotate(45deg) translate(-2px);
+    }
+    .delete {
+      display: none;
+    }
+  }
+  .hidden-2:hover {
+    cursor: pointer;
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid whitesmoke;
+      position: relative;
+      z-index: 1;
+      top: 10px;
+    }
+    .delete {
+      display: block;
+      padding: 3px 10px 3px 10px;
+      background: whitesmoke;
+      margin-top: 10px;
+      color: black;
+      border-radius: 5px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.remove-confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: white;
+  border: 3px solid black;
+  font-size: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  left: 23rem;
+  p {
+    margin-right: 1rem;
+  }
+  button {
+    margin: 0rem 1rem 0rem 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(107, 99, 99);
+    color: whitesmoke;
+  }
+  button:hover {
+    background-color: rgb(202, 199, 199);
+    color: rgb(0, 0, 0);
+  }
+}

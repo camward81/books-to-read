@@ -58,17 +58,16 @@ function App() {
   };
 
   //Get from DB (books)
-  const getFromDB = () => {
-    axios.get("http://localhost:3001/library").then((response) => {
-      setLibrary(response.data);
-      console.log(response.data);
-    });
-  };
+  // // const getFromDB = () => {
+  // //   axios.get("http://localhost:3001/library").then((response) => {
+  // //     setLibrary(response.data);
+  // //     console.log(response.data);
+  // //   });
+  // };
 
   //Remove from DB (books)
   const removeFromDB = ({ id }) => {
     axios.delete(`http://localhost:3001/delete/${id}`);
-    getFromDB();
     window.location.reload();
   };
 
@@ -89,17 +88,16 @@ function App() {
   };
 
   //Get from DB (read_books)
-  const getReadBooks = () => {
-    axios.get("http://localhost:3001/readbooks").then((response) => {
-      setRead(response.data);
-      console.log(response.data);
-    });
-  };
+  // const getReadBooks = () => {
+  //   axios.get("http://localhost:3001/readbooks").then((response) => {
+  //     setRead(response.data);
+  //     console.log(response.data);
+  //   });
+  // };
 
   //Remove from DB (read_books)
   const removeFromRead = ({ id }) => {
     axios.delete(`http://localhost:3001/readremove/${id}`);
-    getReadBooks();
     window.location.reload();
   };
 
@@ -107,7 +105,6 @@ function App() {
   const addReadHandler = ({ title, author, id }) => {
     removeFromDB({ id });
     addToRead({ title, author });
-    getReadBooks();
     window.location.reload();
   };
 
@@ -116,7 +113,6 @@ function App() {
     e.preventDefault();
     if (title !== "" && author !== "") {
       addToDB();
-      getFromDB();
       //Reset Inputs
       window.location.reload();
     } else {
